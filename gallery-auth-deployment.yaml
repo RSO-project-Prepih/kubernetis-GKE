@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gallery-auth
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gallery-auth
+  template:
+    metadata:
+      labels:
+        app: gallery-auth
+    spec:
+      containers:
+      - name: gallery-auth
+        image: tinec/auth:latest
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - secretRef:
+            name: gallery-auth-secret
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "3Gi"
+            cpu: "1"
+        livenessProbe:
+          httpGet:
+            path: /live
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 5
