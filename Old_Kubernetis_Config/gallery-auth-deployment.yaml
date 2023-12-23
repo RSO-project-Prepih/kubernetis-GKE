@@ -22,11 +22,11 @@ spec:
             name: gallery-auth-secret
         resources:
           requests:
-            memory: "256Mi"
-            cpu: "250m"
+            memory: "500Mi"
+            cpu: "1"
           limits:
             memory: "3Gi"
-            cpu: "1"
+            cpu: "2"
         livenessProbe:
           httpGet:
             path: /live
@@ -39,3 +39,8 @@ spec:
             port: 5000
           initialDelaySeconds: 5
           periodSeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
