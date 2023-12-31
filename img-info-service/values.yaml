@@ -1,0 +1,46 @@
+replicaCount: 2
+
+image:
+  repository: jabok123458/rso-infor
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  ports:
+    http: 8080
+    grpc: 50051
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "50Mi"
+  limits:
+    memory: "100Mi"
+
+livenessProbe:
+  httpGet:
+    path: /live
+    port: 8080
+  initialDelaySeconds: 10
+  periodSeconds: 5
+
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 8080
+  initialDelaySeconds: 5
+  periodSeconds: 5
+
+secret:
+  DB_HOST: Y29ybmVsaXVzLmRiLmVsZXBoYW50c3FsLmNvbQ==
+  DB_PORT: NTQzMg==
+  DB_USER: Z2VncXNsdm4=
+  DB_PASSWORD: TGdTdlNWV0xpM212MEpsVEdJZTZtczBoM0hXZ0xIQ08=
+  DB_NAME: Z2VncXNsdm4=
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80

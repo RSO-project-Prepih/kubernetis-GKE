@@ -3,3 +3,10 @@ db-secret.yml
 
 # ignore gallery-auth-secret.yml
 gallery-auth-secret.yml
+
+# ignore argocd.exe
+argocd.exe
+auth-service-0.1.0.tgz
+frontend-service-0.1.0.tgz
+gallery-service-0.1.0.tgz
+img-info-service-0.1.0.tgz
