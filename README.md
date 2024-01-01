@@ -5,5 +5,7 @@ Currently the cluster deploys only one service, gallery-service. More services w
 ## Old version
 if you want to see the deployment using kubectl and kubernetes manifest files you can see it in the folder [Old_Kubernetes_Config](C:\Users\Jakob\NUM_DOMACA_NALOGA\RSO-kubernetis-GKE\kubernetis-GKE\Old_Kubernetis_Config)
 
+## Argo Cd link 
+https://34.140.22.18/applications?showFavorites=false&proj=&sync=&autoSync=&health=&namespace=&cluster=&labels= 
 ## Prerequisites
 To connect to kubernetes you have to install [Google Cloud SDK](https://cloud.google.com/sdk/).And you have to install a google plugin for authentication.

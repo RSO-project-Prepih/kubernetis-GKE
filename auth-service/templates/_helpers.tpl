@@ -14,7 +14,7 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
 
 {{/*
-Create a default fully qualified app name.
+Create a default fully qualified app name .
 */}}
 {{- define "auth-service.fullname" -}}
 {{- if .Values.fullnameOverride -}}
