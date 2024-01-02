@@ -3,7 +3,7 @@ replicaCount: 3
 image:
   repository: jabok123458/rso_prepih
   pullPolicy: Always
-  tag: ad40518ec295fd72f6a1896909cf003153bb6b3a
+  tag: 25fd3e76a1d4583e9e82c47873facd8b33416913
 
 service:
   type: LoadBalancer
