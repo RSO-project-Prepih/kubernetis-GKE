@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: jabok123458/gallery-frontend
   pullPolicy: Always
-  tag: 070975c1aaef9b219b20062f60c776eec24552ea
+  tag: be3db1e3500287516a6e2da8ae3b86c6e7c8f45d
 
 service:
   type: LoadBalancer
