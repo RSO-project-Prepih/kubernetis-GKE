@@ -8,7 +8,7 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "auth-service.fullname" . }}
+      app: {{ include "auth-service.fullname" . }} # Make sure this matches the labels on your pods
   template:
     metadata:
       labels:
