@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: tinec/auth
-  tag: ed42c26db5fd5d011a3c04f55abdaad7cd0fd15a
+  tag: c58409c6c746fbcf2fdd9850f3f6333c24928afa
   pullPolicy: Always
 
 service:
