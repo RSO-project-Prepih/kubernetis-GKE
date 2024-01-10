@@ -43,6 +43,7 @@ secret:
   DB_USER: Z2VncXNsdm4=
   DB_PASSWORD: TGdTdlNWV0xpM212MEpsVEdJZTZtczBoM0hXZ0xIQ08=
   DB_NAME: Z2VncXNsdm4=
+  GRPC_ADDRESS: MzUuMjMzLjEyNC4xNTE6NTAwMA==
 
 autoscaling:
   enabled: true
