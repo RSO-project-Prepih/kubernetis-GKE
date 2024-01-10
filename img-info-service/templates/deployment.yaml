@@ -6,11 +6,13 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "img-info-service.fullname" . }}
+      app.kubernetes.io/instance: {{ include "img-info-service.name" . }}
+      app.kubernetes.io/name: {{ include "img-info-service.name" . }}
   template:
     metadata:
       labels:
-        app: {{ include "img-info-service.fullname" . }}
+        app.kubernetes.io/instance: {{ include "img-info-service.name" . }}
+        app.kubernetes.io/name: {{ include "img-info-service.name" . }}
     spec:
       containers:
         - name: img-info-service
