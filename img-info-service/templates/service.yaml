@@ -9,11 +9,11 @@ spec:
   ports:
     - name: http
       port: {{ .Values.service.ports.http }}
-      targetPort: {{ .Values.service.ports.http }}
+      targetPort: http
       protocol: TCP
     - name: grpc
       port: {{ .Values.service.ports.grpc }}
-      targetPort: {{ .Values.service.ports.grpc }}
+      targetPort: grpc
       protocol: TCP
   selector:
     {{- include "img-info-service.selectorLabels" . | nindent 4 }}
