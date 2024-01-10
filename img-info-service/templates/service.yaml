@@ -16,4 +16,4 @@ spec:
       targetPort: grpc
       protocol: TCP
   selector:
-    {{- include "img-info-service.fullname" . }}
+    {{- include "img-info-service.selectorLabels" . | nindent 4 }}
