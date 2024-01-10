@@ -10,6 +10,10 @@ service:
   port: 80
   targetPort: 3000 # Frontend port
 
+secret:
+  VITE_AUTH_API_URL: MzQuMTQwLjE4Ny44MQ==
+  VITE_PHOTOS_API_URL: MzQuMjIuMjAzLjIyNA==
+
 resources:
   limits:
     memory: "150Mi"
