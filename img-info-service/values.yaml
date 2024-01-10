@@ -8,10 +8,8 @@ image:
 service:
   type: LoadBalancer
   ports:
-  - name: http
-    containerPort: 8080
-  - name: grpc
-    containerPort: 50051
+    http: 8080
+    grpc: 50051
 
 serviceMonitor:
   enabled: true
