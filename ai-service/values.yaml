@@ -3,7 +3,7 @@ replicaCount: 3
 image:
   repository: jabok123458/ai-service
   pullPolicy: Always
-  tag: 7845cbd30dad45d9262cc7b95daff1b8b61cad94
+  tag: eabbad277d4abaed7c2addd4d063fb0bdb0e3926
 
 service:
   type: LoadBalancer
