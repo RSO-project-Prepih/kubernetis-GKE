@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: jabok123458/rso-infor
-  tag: 046122ffae6fbe880e92610dd5f84024d7017ce3
+  tag: c1f7ca7375d5938be245aa2dc4754b2338f1eedf
   pullPolicy: Always
 
 service:
